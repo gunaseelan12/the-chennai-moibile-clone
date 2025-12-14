@@ -1,0 +1,567 @@
+/* footer.css - The Chennai Mobiles Footer */
+
+/* ================= BASE/DESKTOP STYLES ================= */
+/* DESKTOP-ல் எப்படி இருக்கணோ அப்படியே */
+
+.footer-container {
+  background-color: #000000;
+  font-family: 'Arial', sans-serif;
+  width: 100%;
+  margin-top: -10px;
+}
+
+/* Mobile Bottom Navigation - DESKTOP-ல் மறைந்திருக்கும் */
+.mobile-bottom-nav {
+  display: none;
+}
+
+/* Top Section - About Us */
+.footer-top-section {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #333333;
+}
+
+.footer-about {
+  max-width: 1200px;
+  margin: 60px auto 0 40px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cccccc;
+  text-align: justify;
+}
+
+/* Middle Section - Main Content */
+.footer-middle-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #333333;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-section {
+  margin-top: -40px;
+}
+
+.footer-logo {
+  max-width: 400px;
+  height: auto;
+  margin-right: 100px;
+}
+
+.column-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-link {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+.contact-info {
+  margin-bottom: 25px;
+}
+
+.contact-item {
+  color: #cccccc;
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.contact-address {
+  color: #cccccc;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+/* Social Icons */
+.social-icons1 {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon-link {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.social-icon-link:hover {
+  transform: translateY(-3px);
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.social-icon-link:hover .social-icon {
+  filter: brightness(0) invert(0.8);
+}
+
+/* Bottom Section - App, EMI, Payment */
+.footer-bottom-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #333333;
+}
+
+.app-store-section {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.emi-partners-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment-options-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.app-store-image,
+.emi-partners-image,
+.payment-options-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Footer Bottom - Policies & Copyright */
+.footer-bottom-row {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-policies {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
+.policy-link {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.policy-link:hover {
+  color: #ffffff;
+}
+
+.separator {
+  color: #666666;
+  font-size: 14px;
+}
+
+.copyright-section {
+  margin-top: 15px;
+}
+
+.copyright-text {
+  color: #999999;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Animation Effects - DESKTOP ONLY */
+.footer-link::before {
+  content: '→';
+  position: absolute;
+  left: -15px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover::before {
+  opacity: 1;
+  left: -10px;
+}
+
+.policy-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.policy-link:hover::after {
+  width: 100%;
+}
+
+/* Loading Animation - DESKTOP ONLY */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-column {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.footer-column:nth-child(1) { animation-delay: 0.1s; }
+.footer-column:nth-child(2) { animation-delay: 0.2s; }
+.footer-column:nth-child(3) { animation-delay: 0.3s; }
+.footer-column:nth-child(4) { animation-delay: 0.4s; }
+
+/* Hover Effects for Images - DESKTOP ONLY */
+.app-store-image:hover,
+.emi-partners-image:hover,
+.payment-options-image:hover {
+  transform: scale(1.05);
+}
+
+/* ================= MOBILE RESPONSIVE (768px↓) ================= */
+@media screen and (max-width: 768px) {
+  /* Show mobile bottom navigation */
+  .mobile-bottom-nav {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid #e0e0e0;
+    z-index: 1000;
+    height: 60px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mobile-nav-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    text-decoration: none;
+    color: #666;
+    height: 100%;
+    padding: 5px 0;
+  }
+  
+  .nav-icon {
+    width: 22px;
+    height: 22px;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .nav-text {
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #333;
+  }
+  
+  .nav-item.active .nav-icon-img {
+    filter: brightness(0) invert(0.3) sepia(1) saturate(5) hue-rotate(340deg);
+  }
+  
+  .nav-item.active .nav-text {
+    color: #ff3b30;
+    font-weight: 600;
+  }
+  
+  /* Footer adjustments for mobile */
+  .footer-container {
+    padding-bottom: 70px !important;
+  }
+  
+  .footer-about {
+    margin: 40px 20px 0;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .about-text {
+    text-align: center;
+  }
+  
+  .footer-middle-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+    margin-left: 0;
+    padding: 0 20px;
+  }
+  
+  .footer-column {
+    align-items: center;
+  }
+  
+  .logo-section {
+    margin-top: 0;
+  }
+  
+  .footer-logo {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  
+  .column-title {
+    font-size: 16px;
+    margin-left: 0;
+    margin-top: 0;
+  }
+  
+  .footer-links {
+    margin-left: 0;
+    margin-top: 0;
+  }
+  
+  .footer-links li {
+    margin-top: 0;
+  }
+  
+  .contact-item,
+  .contact-address {
+    margin-left: 0;
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  .social-icons1 {
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    height: 25px;
+    width: 25px;
+  }
+  
+  /* Footer bottom section - mobile */
+  .footer-bottom-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  .app-store-section,
+  .emi-partners-section,
+  .payment-options-section {
+    align-items: center;
+  }
+  
+  .app-store-image,
+  .emi-partners-image,
+  .payment-options-image {
+    max-width: 80%;
+  }
+  
+  /* Remove desktop animations on mobile */
+  .footer-link::before,
+  .policy-link::after,
+  .app-store-image:hover,
+  .emi-partners-image:hover,
+  .payment-options-image:hover {
+    display: none;
+  }
+  
+  .footer-column {
+    animation: none;
+  }
+}
+
+/* ================= TABLET RESPONSIVE (769px-992px) ================= */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .mobile-bottom-nav {
+    display: none;
+  }
+  
+  .footer-container {
+    padding-bottom: 30px !important;
+  }
+  
+  .footer-about {
+    margin: 40px auto 0;
+    padding: 0 30px;
+    text-align: center;
+  }
+  
+  .footer-middle-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 0 30px;
+  }
+  
+  .footer-column {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .logo-section {
+    margin-top: 0;
+  }
+  
+  .footer-logo {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .footer-bottom-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 0 30px;
+  }
+  
+  .payment-options-section {
+    grid-column: span 2;
+    align-items: center;
+  }
+}
+
+/* ================= DESKTOP CONFIRMATION (993px↑) ================= */
+@media screen and (min-width: 993px) {
+  .mobile-bottom-nav {
+    display: none !important;
+  }
+  
+  .footer-container {
+    padding-bottom: 30px !important;
+  }
+  
+  /* Desktop-ல் எல்லாம் base styles-ல இருக்கும் */
+}
+
+/* ================= VERY SMALL MOBILE (480px↓) ================= */
+@media screen and (max-width: 480px) {
+  .mobile-bottom-nav {
+    height: 55px;
+  }
+  
+  .nav-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .nav-text {
+    font-size: 8px;
+  }
+  
+  .footer-container {
+    padding-bottom: 65px !important;
+  }
+  
+  .footer-logo {
+    max-width: 200px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+  }
+  
+  .column-title {
+    font-size: 14px;
+  }
+  
+  .footer-link,
+  .contact-item,
+  .contact-address,
+  .policy-link,
+  .copyright-text {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,273 @@
+/* ================= BEST PICKS SECTION ================= */
+.best-picks-section {
+  padding: 30px 20px -70px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.best-picks-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d4a574;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  letter-spacing: 1.5px;
+  margin-left: -6px;
+}
+
+/* ================= CAROUSEL ================= */
+.carousel-wrapper {
+  overflow: hidden;
+  max-width: calc((380px * 4) + (30px * 3) + 80px);
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: stepScroll 25s linear infinite;
+}
+
+.dual-card-group {
+  display: flex;
+  gap: 30px;
+  flex-shrink: 0;
+  width: calc((380px * 2) + 30px);
+}
+
+/* ================= IMAGE CARD ================= */
+.image-only-card {
+  width: 460px;
+  height: 340px;
+  background: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.big-image {
+  max-width: 160%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.image-only-card:hover .big-image {
+  transform: scale(1.05);
+}
+
+/* ================= DETAIL CARD ================= */
+.detail-card {
+  width: 280px;
+  height: 340px;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image slideshow */
+.detail-image-wrapper {
+  height: 235px;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.detail-image-slideshow {
+  position: relative;
+  width: 260px;
+  height: 100%;
+  margin-left: 28px;
+  margin-top: 10px;
+  background-color: #f4f3f3;
+  padding: 10px;
+}
+
+.slideshow-image {
+  position: absolute;
+  top: -50px;
+  width: 230px;
+  height: 300px;
+  object-fit: contain;
+  padding: 20px;
+  transition: opacity 0.8s ease-in-out;
+}
+
+/* Content */
+.detail-content {
+  padding: 20px;
+}
+
+.detail-title {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-top: -25px;
+}
+
+/* Price section */
+.current-price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #000;
+  margin-top: 10px;
+}
+
+.percentage-left {
+  font-size: 1.1rem;
+  color: #27ae60;
+  font-weight: 700;
+}
+
+.old-price-right {
+  font-size: 1rem;
+  color: #e74c3c;
+  text-decoration: line-through;
+}
+
+.savings-text {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Button */
+.buy-now-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 15px;
+}
+
+.buy-now-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* ================= DESKTOP ANIMATION ================= */
+@keyframes stepScroll {
+  0%, 20% { transform: translateX(0); }
+  25%, 45% { transform: translateX(calc(-1 * ((380px * 2) + 60px))); }
+  50%, 70% { transform: translateX(calc(-2 * ((380px * 2) + 60px))); }
+  75%, 95% { transform: translateX(calc(-3 * ((380px * 2) + 60px))); }
+  100% { transform: translateX(calc(-4 * ((380px * 2) + 60px))); }
+}
+
+/* ================= TABLET (2 CARDS) ================= */
+@media (max-width: 1199px) and (min-width: 768px) {
+
+  .carousel-wrapper {
+    max-width: calc((300px * 2) + 30px);
+  }
+
+  .dual-card-group {
+    width: calc((300px * 2) + 30px);
+    flex-direction: row;
+  }
+
+  .image-only-card,
+  .detail-card {
+    width: 300px;
+    height: 320px;
+  }
+
+  .carousel-track {
+    animation: stepScrollTablet 22s steps(4) infinite;
+  }
+}
+
+@keyframes stepScrollTablet {
+  0%, 25% { transform: translateX(0); }
+  30%, 55% { transform: translateX(calc(-1 * ((300px * 2) + 30px))); }
+  60%, 85% { transform: translateX(calc(-2 * ((300px * 2) + 30px))); }
+  100% { transform: translateX(calc(-3 * ((300px * 2) + 30px))); }
+}
+
+/* ================= MOBILE (2 CARDS) ================= */
+@media (max-width: 767px) {
+
+  /* ===== Carousel width ===== */
+  .carousel-wrapper {
+    max-width: calc((300px * 2) + 20px);
+  }
+
+  .dual-card-group {
+    width: calc((300px * 2) + 20px);
+    gap:1px;
+    flex-direction: row;
+  }
+
+  /* ===== Card sizes ===== */
+  .image-only-card {
+    width: 150px;
+    height: 300px;
+    margin-left: 40px;
+  }
+
+  .detail-card {
+    width: 350px;
+    height:300px;
+    margin-left: 5px;
+  }
+
+  /* ===== Image area ===== */
+  .detail-image-wrapper {
+    height: 200px;
+  }
+
+  .detail-image-slideshow {
+    width: 100px;
+    margin-left: 20px;
+  }
+
+  /* ===== TEXT SIZE FIX ===== */
+  .detail-title {
+    font-size: 0.75rem;           /* ❌ small -> ✅ normal */
+    line-height: 1;
+    margin-top: 3px;
+  }
+
+  .current-price {
+    font-size: 1rem;         /* big price */
+  }
+
+  .percentage-left {
+    font-size: 1rem;
+  }
+
+  .old-price-right {
+    font-size: 1rem;
+  }
+
+
+  /* ===== Animation ===== */
+  .carousel-track {
+    animation: stepScrollMobile 20s steps(4) infinite;
+  }
+
+  @keyframes stepScrollTablet {
+  0%, 25% { transform: translateX(0); }
+  30%, 55% { transform: translateX(calc(-1 * ((200px * 2) + 20px))); }
+  60%, 85% { transform: translateX(calc(-2 * ((200px * 2) + 20px))); }
+  100% { transform: translateX(calc(-3 * ((200px * 2) + 20px))); }
+}
+}
+

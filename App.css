@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+/* Remove the padding-bottom from .app-container */
+/* Or keep it if you want extra space before footer */
+.app-container {
+  padding-bottom: 0; /* Remove or adjust this */
+}
+
+.App {
+  min-height: 100vh;
+  position: relative;
+  background: #f8f9fa;
+}
+
+/* Footer specific styles */
+footer {
+  margin-top: -10px;
+  width: 100%;
+}

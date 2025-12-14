@@ -1,0 +1,539 @@
+/* Bestseller.css - UPDATED */
+.bestseller-container {
+  background: #ffffff;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.bestseller-header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.bestseller-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Urbanist', sans-serif;
+  margin: 0;
+  order: 1; /* Title on left */
+}
+
+.view-all-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #260090;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  order: 2; /* View All on right */
+}
+
+.view-all-link:hover {
+  color: #1a0066;
+  transform: translateX(5px);
+}
+
+.arrow-icon {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.view-all-link:hover .arrow-icon {
+  transform: translateX(3px);
+}
+
+/* Row Layout - DESKTOP (6 cards) */
+.bestseller-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.row-4 {
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 100%;
+}
+
+.bestseller-card {
+  background: #f6f4f4;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  padding: 15px;
+  height: 305px;
+  position: relative;
+  border: 1px solid #f0f0f0;
+  width: 100%;
+}
+
+.bestseller-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Discount Square - Top Right */
+.discount-square {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  background: linear-gradient(135deg, #035906b3 0%, #035906b3 100%);
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 0 0 0 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.discount-percent {
+  font-size: 0.8rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.product-image {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background: linear-gradient(135deg, #f6f4f4 0%, #f6f4f4 100%);
+  margin-bottom: 15px;
+}
+
+.product-image img {
+  max-width: 100%;
+  max-height: 140px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.bestseller-card:hover .product-image img {
+  transform: scale(1.05);
+}
+
+.product-description {
+  font-size: 0.85rem;
+  color: #020202;
+  margin-bottom: 10px;
+  height: 40px;
+  line-height: 1.3;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+
+/* Price Section */
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 15px;
+}
+
+.price-left {
+  text-align: left;
+}
+
+.price-right {
+  text-align: right;
+}
+
+.current-price {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 1;
+  margin: 0;
+}
+
+.originalPrice {
+  font-size: 0.85rem;
+  color: #f80404;
+  font-weight: 500;
+  text-decoration: line-through;
+  margin: 5px 0 0 0;
+}
+
+.product-actions {
+  display: flex;
+  gap: 40px;
+}
+
+/* ========== TABLET VIEW (768px to 1023px) - 3 CARDS ========== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .bestseller-container {
+    padding: 15px;
+    max-width: 100%;
+  }
+  
+  .bestseller-header {
+    margin-bottom: 25px;
+    padding: 0 5px;
+    justify-content: space-between; /* Keep title left, view all right */
+  }
+  
+  .bestseller-title {
+    font-size: 1.8rem;
+    order: 1; /* Title on left */
+  }
+  
+  .view-all-link {
+    font-size: 15px;
+    order: 2; /* View All on right */
+  }
+  
+  /* TABLET: 3 cards per row */
+  .bestseller-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .row-4 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+  
+  .bestseller-card {
+    height: 250px;
+    padding: 12px;
+  }
+  
+  .product-image {
+    height: 140px;
+    margin-bottom: 12px;
+  }
+  
+  .product-image img {
+    max-height: 130px;
+  }
+  
+  .product-description {
+    font-size: 0.8rem;
+    height: 36px;
+    margin-bottom: 8px;
+  }
+  
+  .current-price {
+    font-size: 18px;
+  }
+  
+  .originalPrice {
+    font-size: 0.8rem;
+  }
+}
+
+/* ========== MOBILE L (425px to 767px) - 2 CARDS ========== */
+@media (min-width: 425px) and (max-width: 767px) {
+  .bestseller-container {
+    padding: 12px;
+  }
+  
+  .bestseller-header {
+    margin-bottom: 20px;
+    flex-direction: row; /* Keep row layout on mobile L */
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .bestseller-title {
+    font-size: 1.6rem;
+    order: 1; /* Title left */
+  }
+  
+  .view-all-link {
+    font-size: 14px;
+    order: 2; /* View All right */
+  }
+  
+  /* MOBILE L: 2 cards per row */
+  .bestseller-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .row-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .bestseller-card {
+    height: 210px;
+    padding: 10px;
+  }
+  
+  .product-image {
+    height: 120px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .product-image img {
+    max-height: 110px;
+  }
+  
+  .product-description {
+    font-size: 0.75rem;
+    height: 34px;
+    margin-bottom: 6px;
+  }
+  
+  .price-section {
+    margin-bottom: 10px;
+  }
+  
+  .current-price {
+    font-size: 16px;
+  }
+  
+  .originalPrice {
+    font-size: 0.75rem;
+  }
+}
+
+/* ========== MOBILE M (375px to 424px) - 2 CARDS ========== */
+@media (min-width: 375px) and (max-width: 424px) {
+  .bestseller-container {
+    padding: 10px;
+  }
+  
+  .bestseller-header {
+    flex-direction: row; /* Keep row layout */
+    justify-content: space-between;
+  }
+  
+  .bestseller-title {
+    font-size: 1.5rem;
+    order: 1;
+  }
+  
+  .view-all-link {
+    font-size: 13px;
+    order: 2;
+  }
+  
+  /* MOBILE M: 2 cards per row */
+  .bestseller-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  
+  .bestseller-card {
+    height: 200px;
+    padding: 8px;
+  }
+  
+  .product-image {
+    height: 110px;
+    margin-bottom: 8px;
+    padding: 8px;
+  }
+  
+  .product-image img {
+    max-height: 100px;
+  }
+  
+  .product-description {
+    font-size: 0.7rem;
+    height: 32px;
+    margin-bottom: 5px;
+  }
+  
+  .current-price {
+    font-size: 15px;
+  }
+  
+  .originalPrice {
+    font-size: 0.7rem;
+  }
+}
+
+/* ========== MOBILE S (320px to 374px) - 2 CARDS ========== */
+@media (min-width: 320px) and (max-width: 374px) {
+  .bestseller-container {
+    padding: 8px;
+  }
+  
+  .bestseller-header {
+    margin-bottom: 15px;
+    flex-direction: row; /* Keep row layout */
+    justify-content: space-between;
+  }
+  
+  .bestseller-title {
+    font-size: 1.4rem;
+    order: 1;
+  }
+  
+  .view-all-link {
+    font-size: 12px;
+    order: 2;
+  }
+  
+  /* MOBILE S: 2 cards per row */
+  .bestseller-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+  
+  .bestseller-card {
+    height: 190px;
+    padding: 6px;
+  }
+  
+  .product-image {
+    height: 100px;
+    margin-bottom: 6px;
+    padding: 6px;
+  }
+  
+  .product-image img {
+    max-height: 90px;
+  }
+  
+  .product-description {
+    font-size: 0.65rem;
+    height: 30px;
+    margin-bottom: 4px;
+  }
+  
+  .current-price {
+    font-size: 14px;
+  }
+  
+  .originalPrice {
+    font-size: 0.65rem;
+  }
+}
+
+/* ========== EXTRA SMALL MOBILE (below 320px) ========== */
+@media (max-width: 319px) {
+  .bestseller-container {
+    padding: 6px;
+  }
+  
+  .bestseller-header {
+    flex-direction: row; /* Keep row layout */
+    justify-content: space-between;
+    background-color: white;
+  }
+  
+  .bestseller-title {
+    font-size: 1.3rem;
+    order: 1;
+    
+  }
+  
+  .view-all-link {
+    font-size: 11px;
+    order: 2;
+  }
+  
+  /* EXTRA SMALL: 2 cards per row */
+  .bestseller-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+  
+  .bestseller-card {
+    height: 220px;
+    padding: 5px;
+  }
+  
+  .product-image {
+    height: 90px;
+    margin-bottom: 5px;
+    padding: 5px;
+  }
+  
+  .product-image img {
+    max-height: 80px;
+  }
+  
+  .product-description {
+    font-size: 0.6rem;
+    height: 28px;
+    margin-bottom: 3px;
+  }
+  
+  .current-price {
+    font-size: 13px;
+  }
+  
+  .originalPrice {
+    font-size: 0.6rem;
+  }
+}
+
+/* ========== DESKTOP VIEW (1024px and above) ========== */
+@media (min-width: 1024px) {
+  .bestseller-container {
+    padding: 30px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .bestseller-header {
+    justify-content: space-between; /* Title left, View All right */
+  }
+  
+  .bestseller-title {
+    order: 1; /* Title on left */
+  }
+  
+  .view-all-link {
+    order: 2; /* View All on right */
+  }
+  
+  /* DESKTOP: 6 cards per row */
+  .bestseller-row {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+  }
+  
+  .row-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .bestseller-card {
+    height: 305px;
+    padding: 15px;
+  }
+  
+  .product-image {
+    height: 150px;
+  }
+  
+  .product-image img {
+    max-height: 140px;
+  }
+  
+  .product-description {
+    font-size: 0.85rem;
+    height: 40px;
+  }
+  
+  .current-price {
+    font-size: 20px;
+  }
+  
+  .originalPrice {
+    font-size: 0.85rem;
+  }
+}
